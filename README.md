@@ -14,22 +14,28 @@ I wished to explore possibility of extracting ECG data and analyzing it to deter
 
 1. Ensure that you have [Python 3](https://www.python.org/downloads/) installed on your device.
 
-2. Download the [MIT-BIH ECG Dataset](https://www.physionet.org/content/mitdb/1.0.0/) and place it in the root directory. Alternatively, you can use your own data in csv format.
+2. Run the following code in the terminal of your root directory:
 
-3. Set the sampling rate (Hz) of your ECGz data or the provided data (360 Hz).
+```python
+pip3 install py-ecg-detectors
+```
+
+3. Download the [MIT-BIH ECG Dataset](https://www.physionet.org/content/mitdb/1.0.0/) and place it in the root directory. Alternatively, you can use your own data in csv format.
+
+4. Set the sampling rate (Hz) of your ECGz data or the provided data (360 Hz).
 
 ```python
 fs = 360   #or your specified sampling frequency
 ```
 
-4. Use the csv parser on the csv file you wish to extract data from.
+5. Use the csv parser on the csv file you wish to extract data from.
 
 ```python
 csvdata = np.loadtxt(open("file-name.csv", "rb"), dtype=int,
                        delimiter=",", skiprows=1)
 ```
 
-5. Run the python script to conduct ECG and HRV analysis, as well as to generate a plot of the data.
+6. Run the python script to conduct ECG and HRV analysis, as well as to generate a plot of the data.
 
 ## Acknowledegements
 
